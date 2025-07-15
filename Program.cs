@@ -36,8 +36,8 @@ namespace EvalucionCombustible.Consola
 
                             galonesUsa = litros * 0.26417;
 
-                            Console.WriteLine("La cantidad de suma diaria es de ", sumaCargasPorDia);
-                            Console.WriteLine("La cantidad de cargas son ", cantCargaPorDia);
+                            Console.WriteLine($"La cantidad de suma diaria es de {sumaCargasPorDia}" );
+                            Console.WriteLine($"La cantidad de cargas son {cantCargaPorDia}");
                             Console.WriteLine("Quiere continuar");
                             Console.WriteLine("S - Si");
                             Console.WriteLine("N- No");
@@ -74,10 +74,10 @@ namespace EvalucionCombustible.Consola
                         } while (siguiente == false);
                         break;
                 }
-                Console.WriteLine("El total de cargas es ", cantidadCargasTotal);
-                Console.WriteLine("El total de combustible es: ", sumaTotalPremium);
-                Console.WriteLine("El total de combustible es: ", sumaTotalSuper);
-                Console.WriteLine("El promedio es: ", (sumaTotalPremium+sumaTotalSuper)/cantidadCargasTotal);
+                Console.WriteLine($"El total de cargas es {cantidadCargasTotal} ");
+                Console.WriteLine($"El total de combustible es: {sumaTotalPremium} " );
+                Console.WriteLine($"El total de combustible es: {sumaTotalSuper} " );
+                Console.WriteLine($"El promedio es: {(sumaTotalPremium + sumaTotalSuper) / cantidadCargasTotal}");
 
                 Console.WriteLine();
 

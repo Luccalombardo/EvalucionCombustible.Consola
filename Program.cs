@@ -109,7 +109,7 @@ namespace EvalucionCombustible.Consola
 
 
         }
-        private static int GetDouble(string mensaje)
+        private static double GetDouble(string mensaje)
         {
             do
             {

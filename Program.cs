@@ -19,69 +19,71 @@ namespace EvalucionCombustible.Consola
                 double cantCargaPorDia = 0;
                 double sumaCargasPorDia = 0;
                 Console.WriteLine($"Hoy es el dia {i}({CualDiaEs(i)})");
-                MenuCombusible();
-                double tipoCombustible = GetDouble("Elija la opcion: ");
-                switch (tipoCombustible)
+                do
                 {
-                    case 1:
-                        do
-                        {
-
-                            litros = GetIntLitros("Ingrese la cantidad de litros: ");
-                            cantCargaPorDia++;
-                            sumaCargasPorDia = sumaCargasPorDia + litros;
-                            sumaTotalSuper += litros;
-                            cantidadCargasTotal++;
-                            galonesUk = litros * 0.21997;
-
-                            galonesUsa = litros * 0.26417;
-
-                            Console.WriteLine($"La cantidad de suma diaria es de {sumaCargasPorDia}" );
-                            Console.WriteLine($"La cantidad de cargas son {cantCargaPorDia}");
-                            Console.WriteLine("Quiere continuar");
-                            Console.WriteLine("S - Si");
-                            Console.WriteLine("N- No");
-                            string opcion = Console.ReadLine();
-                            if (opcion == "n")
+                    MenuCombusible();
+                    double tipoCombustible = GetDouble("Elija la opcion: ");
+                    switch (tipoCombustible)
+                    {
+                        case 1:
+                            do
                             {
-                                siguiente = true;
-                            }
-                        } while (siguiente == false);
-                        break;
-                    case 2:
-                        do
-                        {
 
-                            litros = GetIntLitros("Ingrese la cantidad de litros");
-                            cantCargaPorDia++;
-                            sumaCargasPorDia = sumaCargasPorDia + litros;
-                            sumaTotalPremium += litros;
-                            cantidadCargasTotal++;
-                            galonesUk = litros * 0.21997;
+                                litros = GetIntLitros("Ingrese la cantidad de litros: ");
+                                cantCargaPorDia++;
+                                sumaCargasPorDia = sumaCargasPorDia + litros;
+                                sumaTotalSuper += litros;
+                                cantidadCargasTotal++;
+                                galonesUk = litros * 0.21997;
 
-                            galonesUsa = litros * 0.26417;
+                                galonesUsa = litros * 0.26417;
 
-                            Console.WriteLine("La cantidad de suma diaria es de ", sumaCargasPorDia);
-                            Console.WriteLine("La cantidad de cargas son ", cantCargaPorDia);
-                            Console.WriteLine("Quiere continuar");
-                            Console.WriteLine("S - Si");
-                            Console.WriteLine("N- No");
-                            string opcion = Console.ReadLine();
-                            if (opcion == "n")
+                                Console.WriteLine($"La cantidad de suma diaria es de {sumaCargasPorDia}");
+                                Console.WriteLine($"La cantidad de cargas son {cantCargaPorDia}");
+                                Console.WriteLine("Quiere continuar");
+                                Console.WriteLine("S - Si");
+                                Console.WriteLine("N- No");
+                                string opcion = Console.ReadLine();
+                                if (opcion == "n")
+                                {
+                                    siguiente = true;
+                                }
+                            } while (siguiente == false);
+                            break;
+                        case 2:
+                            do
                             {
-                                siguiente = true;
-                            }
-                        } while (siguiente == false);
-                        break;
-                }
-                Console.WriteLine($"El total de cargas es {cantidadCargasTotal} ");
-                Console.WriteLine($"El total de combustible es: {sumaTotalPremium} " );
-                Console.WriteLine($"El total de combustible es: {sumaTotalSuper} " );
-                Console.WriteLine($"El promedio es: {(sumaTotalPremium + sumaTotalSuper) / cantidadCargasTotal}");
 
-                Console.WriteLine();
+                                litros = GetIntLitros("Ingrese la cantidad de litros");
+                                cantCargaPorDia++;
+                                sumaCargasPorDia = sumaCargasPorDia + litros;
+                                sumaTotalPremium += litros;
+                                cantidadCargasTotal++;
+                                galonesUk = litros * 0.21997;
 
+                                galonesUsa = litros * 0.26417;
 
+                                Console.WriteLine("La cantidad de suma diaria es de ", sumaCargasPorDia);
+                                Console.WriteLine("La cantidad de cargas son ", cantCargaPorDia);
+                                Console.WriteLine("Quiere continuar");
+                                Console.WriteLine("S - Si");
+                                Console.WriteLine("N- No");
+                                string opcion = Console.ReadLine();
+                                if (opcion == "n")
+                                {
+                                    siguiente = true;
+                                }
+                            } while (siguiente == false);
+                            break;
+                    }
+                    Console.WriteLine($"El total de cargas es {cantidadCargasTotal} ");
+                    Console.WriteLine($"El total de combustible es: {sumaTotalPremium} ");
+                    Console.WriteLine($"El total de combustible es: {sumaTotalSuper} ");
+                    Console.WriteLine($"El promedio es: {(sumaTotalPremium + sumaTotalSuper) / cantidadCargasTotal}");
+
+                    Console.WriteLine();
+
+                }while(siguiente== false);
             }
         }
 

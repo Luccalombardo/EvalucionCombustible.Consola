@@ -20,14 +20,14 @@ namespace EvalucionCombustible.Consola
                 double sumaCargasPorDia = 0;
                 Console.WriteLine($"Hoy es el dia {i}({CualDiaEs(i)})");
                 MenuCombusible();
-                double tipoCombustible = GetDouble("Elija la opcion");
+                double tipoCombustible = GetDouble("Elija la opcion: ");
                 switch (tipoCombustible)
                 {
                     case 1:
                         do
                         {
 
-                            litros = GetIntLitros("Ingrese la cantidad de litros");
+                            litros = GetIntLitros("Ingrese la cantidad de litros: ");
                             cantCargaPorDia++;
                             sumaCargasPorDia = sumaCargasPorDia + litros;
                             sumaTotalSuper += litros;

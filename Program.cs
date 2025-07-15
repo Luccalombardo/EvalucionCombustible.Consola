@@ -77,6 +77,7 @@ namespace EvalucionCombustible.Consola
                 Console.WriteLine("El total de cargas es ", cantidadCargasTotal);
                 Console.WriteLine("El total de combustible es: ", sumaTotalPremium);
                 Console.WriteLine("El total de combustible es: ", sumaTotalSuper);
+                Console.WriteLine("El promedio es: ", (sumaTotalPremium+sumaTotalSuper)/cantidadCargasTotal);
 
                 Console.WriteLine();
 
